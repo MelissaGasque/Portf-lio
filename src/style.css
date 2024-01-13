@@ -6,6 +6,16 @@
     --color-5: #3a777a;
 }
 
+@keyframes animacao {
+    0%, 100%{
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
 button {
     cursor: pointer;
 }
@@ -133,7 +143,13 @@ nav {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    position: relative;
 }
+
+.ferramenta:hover img{
+    animation: animacao 2s infinite;
+}
+
 .ferramenta p{
     font-size: 1.2rem;
 }
@@ -156,7 +172,6 @@ main {
     width: 80%;
     margin-bottom: 3rem;
     padding: 3rem;
-
     @media(max-width: 800px){
         flex-direction: column;
         align-items: center;
